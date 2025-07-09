@@ -1,0 +1,287 @@
+<div style="margin-top:40px; margin-left: 100px">
+
+  <div style="padding-left: 128px;">
+    <div class="course-banner">
+      <div class="courses-banner-layover">
+        <h3 style="color: white; font-size: 30px; font-weight: bold; font-family: 'Poppins',sans-serif; padding: 70px; padding-left: 150px; max-width: 700px; margin-bottom: 0px; text-align: center;">Empower your future with procademy's high quality online coding classes.</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-content">
+
+    <div class="content-header">
+      Choose the course that best suits you!
+      <hr class="hr1">
+    </div>
+
+
+    <div class="container">
+
+      <div class="container-each" *ngFor="let course of AllCourses">
+        <div class="image">
+          <img [src]="course.image">
+        </div>
+        <div class="course-title">
+          {{course.title}}
+        </div>
+        <div style="padding: 4px;">
+          <p style="margin-top: 0px; font-family: 'Poppins'; padding: 4px; font-size: 16px;">{{course.desc}}</p>
+        </div>
+        <hr class="hr2">
+        <div style="display: flex; flex-direction: row; padding-top: 5px; padding-bottom: 5px;">
+          <div style="font-family: 'Poppins',sans-serif; font-size: 12px; width: 50%; padding: 0px 10px;">
+            <b>PRICE:</b> ${{course.price}}
+          </div>
+          <div style="font-family: 'Poppins',sans-serif; font-size: 12px; width: 50%; padding: 0px 10px;">
+            <b>RATINGS:</b> {{course.rating}}
+          </div>
+        </div>
+        <hr class="hr2">
+        <div style="display: flex; flex-direction: row;">
+          <div style="width: 50%; padding: 6px; justify-items: left;">
+            <button routerLink="Course/{{course.id}}/Checkout" style="font-family: 'Poppins',sans-serif;" class="abc" >BUY NOW</button>
+          </div>
+          <div style="width: 50%; margin-right: 0px; padding: 6px; padding-left: 10px;">
+            <button routerLink="Course/{{course.id}}"  style="font-family: 'Poppins',sans-serif;" class="abc">DETAILS</button>
+          </div>
+        </div>
+      </div>
+
+      <!--<div class="container-each">
+    <div class="image">
+      <img src="../assets/course-images/course1.jpg" alt="">
+    </div>
+    <div class="course-title">
+      Complete Modern Javascript Course
+    </div>
+    <div style="padding: 4px;">
+      <p style="margin-top: 0px; font-family: 'Poppins'; padding: 4px; font-size: 16px;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc</p>
+    </div>
+    <hr class="hr2">
+    <div style="display: flex; flex-direction: row; padding-top: 5px; padding-bottom: 5px;">
+      <div style="font-family: 'Poppins',sans-serif; font-size: 12px; width: 50%; padding: 0px 10px;">
+        <b>PRICE:</b> $499
+      </div>
+      <div style="font-family: 'Poppins',sans-serif; font-size: 12px; width: 50%; padding: 0px 10px;">
+        <b>RATINGS:</b> 4.5
+      </div>
+    </div>
+    <hr class="hr2">
+    <div style="display: flex; flex-direction: row;">
+      <div style="width: 50%; padding: 6px; justify-items: left;">
+        <button style="font-family: 'Poppins',sans-serif;" class="abc" routerLink="Checkout">BUY NOW</button>
+      </div>
+      <div style="width: 50%; margin-right: 0px; padding: 6px; padding-left: 10px;">
+        <button routerLink="Course-Detail" style="font-family: 'Poppins',sans-serif;" class="abc">DETAILS</button>
+      </div>
+    </div>
+  </div>
+  <div class="container-each">
+    <div class="image">
+      <img src="../assets/course-images/course2.jpg" alt="">
+    </div>
+    <div class="course-title">
+      A complete Angular Course
+    </div>
+    <div style="padding: 4px;">
+      <p style="margin-top: 0px; font-family: 'Poppins'; padding: 4px; font-size: 16px;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc</p>
+    </div>
+    <hr class="hr2">
+    <div style="display: flex; flex-direction: row; padding-top: 5px; padding-bottom: 5px;">
+      <div style="font-family: 'Poppins',sans-serif; font-size: 12px; width: 50%; padding: 0px 10px;">
+        <b>PRICE:</b> $499
+      </div>
+      <div style="font-family: 'Poppins',sans-serif; font-size: 12px; width: 50%; padding: 0px 10px;">
+        <b>RATINGS:</b> 4.5
+      </div>
+    </div>
+    <hr class="hr2">
+    <div style="display: flex; flex-direction: row;">
+      <div style="width: 50%; padding: 6px; justify-items: left;">
+        <button style="font-family: 'Poppins',sans-serif;" class="abc" routerLink="Checkout">BUY NOW</button>
+      </div>
+      <div style="width: 50%; margin-right: 0px; padding: 6px; padding-left: 10px;">
+        <button style="font-family: 'Poppins',sans-serif;" class="abc" routerLink="Course-Detail">DETAILS</button>
+      </div>
+    </div>
+  </div>
+  <div class="container-each">
+    <div class="image">
+      <img src="../assets/course-images/course3.jpg" alt="">
+    </div>
+    <div class="course-title">
+      A Complete Node JS Bootcamp
+    </div>
+    <div style="padding: 4px;">
+      <p style="margin-top: 0px; font-family: 'Poppins'; padding: 4px; font-size: 16px;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc</p>
+    </div>
+    <hr class="hr2">
+    <div style="display: flex; flex-direction: row; padding-top: 5px; padding-bottom: 5px;">
+      <div style="font-family: 'Poppins',sans-serif; font-size: 12px; width: 50%; padding: 0px 10px;">
+        <b>PRICE:</b> $499
+      </div>
+      <div style="font-family: 'Poppins',sans-serif; font-size: 12px; width: 50%; padding: 0px 10px;">
+        <b>RATINGS:</b> 4.5
+      </div>
+    </div>
+    <hr class="hr2">
+    <div style="display: flex; flex-direction: row;">
+      <div style="width: 50%; padding: 6px; justify-items: left;">
+        <button style="font-family: 'Poppins',sans-serif;" class="abc"routerLink="Checkout">BUY NOW</button>
+      </div>
+      <div style="width: 50%; margin-right: 0px; padding: 6px; padding-left: 10px;">
+        <button style="font-family: 'Poppins',sans-serif;" class="abc" routerLink="Course-Detail">DETAILS</button>
+      </div>
+    </div>
+  </div>
+  <div class="container-each">
+    <div class="image">
+      <img src="../assets/course-images/course4.jpg" alt="">
+    </div>
+    <div class="course-title">
+      A Complete React Developer Course
+    </div>
+    <div style="padding: 4px;">
+      <p style="margin-top: 0px; font-family: 'Poppins'; padding: 4px; font-size: 16px;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc</p>
+    </div>
+    <hr class="hr2">
+    <div style="display: flex; flex-direction: row; padding-top: 5px; padding-bottom: 5px;">
+      <div style="font-family: 'Poppins',sans-serif; font-size: 12px; width: 50%; padding: 0px 10px;">
+        <b>PRICE:</b> $499
+      </div>
+      <div style="font-family: 'Poppins',sans-serif; font-size: 12px; width: 50%; padding: 0px 10px;">
+        <b>RATINGS:</b> 4.5
+      </div>
+    </div>
+    <hr class="hr2">
+    <div style="display: flex; flex-direction: row;">
+      <div style="width: 50%; padding: 6px; justify-items: left;">
+        <button style="font-family: 'Poppins',sans-serif;" class="abc" routerLink="Checkout">BUY NOW</button>
+      </div>
+      <div style="width: 50%; margin-right: 0px; padding: 6px; padding-left: 10px;">
+        <button style="font-family: 'Poppins',sans-serif;" class="abc" routerLink="Course-Detail">DETAILS</button>
+      </div>
+    </div>
+  </div>
+  <div class="container-each">
+    <div class="image">
+      <img src="../assets/course-images/course5.jpg" alt="">
+    </div>
+    <div class="course-title">
+      ASP.NET Core with Web API
+    </div>
+    <div style="padding: 4px;">
+      <p style="margin-top: 0px; font-family: 'Poppins'; padding: 4px; font-size: 16px;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc</p>
+    </div>
+    <hr class="hr2">
+    <div style="display: flex; flex-direction: row; padding-top: 5px; padding-bottom: 5px;">
+      <div style="font-family: 'Poppins',sans-serif; font-size: 12px; width: 50%; padding: 0px 10px;">
+        <b>PRICE:</b> $499
+      </div>
+      <div style="font-family: 'Poppins',sans-serif; font-size: 12px; width: 50%; padding: 0px 10px;">
+        <b>RATINGS:</b> 4.5
+      </div>
+    </div>
+    <hr class="hr2">
+    <div style="display: flex; flex-direction: row;">
+      <div style="width: 50%; padding: 6px; justify-items: left;">
+        <button style="font-family: 'Poppins',sans-serif;" class="abc" routerLink="Checkout">BUY NOW</button>
+      </div>
+      <div style="width: 50%; margin-right: 0px; padding: 6px; padding-left: 10px;">
+        <button style="font-family: 'Poppins',sans-serif;" class="abc" routerLink="Course-Detail">DETAILS</button>
+      </div>
+    </div>
+  </div>
+  <div class="container-each">
+    <div class="image">
+      <img src="../assets/course-images/course6.jpg" alt="">
+    </div>
+    <div class="course-title">
+      Froentend Development with Vue.js
+    </div>
+    <div style="padding: 4px;">
+      <p style="margin-top: 0px; font-family: 'Poppins'; padding: 4px; font-size: 16px;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc</p>
+    </div>
+    <hr class="hr2">
+    <div style="display: flex; flex-direction: row; padding-top: 5px; padding-bottom: 5px;">
+      <div style="font-family: 'Poppins',sans-serif; font-size: 12px; width: 50%; padding: 0px 10px;">
+        <b>PRICE:</b> $499
+      </div>
+      <div style="font-family: 'Poppins',sans-serif; font-size: 12px; width: 50%; padding: 0px 10px;">
+        <b>RATINGS:</b> 4.5
+      </div>
+    </div>
+    <hr class="hr2">
+    <div style="display: flex; flex-direction: row;">
+      <div style="width: 50%; padding: 6px; justify-items: left;">
+        <button style="font-family: 'Poppins',sans-serif;" class="abc" routerLink="Checkout">BUY NOW</button>
+      </div>
+      <div style="width: 50%; margin-right: 0px; padding: 6px; padding-left: 10px;">
+        <button style="font-family: 'Poppins',sans-serif;" class="abc" routerLink="Course-Detail">DETAILS</button>
+      </div>
+    </div>
+  </div>
+  <div class="container-each">
+    <div class="image">
+      <img src="../assets/course-images/course7.jpg" alt="">
+    </div>
+    <div class="course-title">
+      A Complete Python Bootcamp
+    </div>
+    <div style="padding: 4px;">
+      <p style="margin-top: 0px; font-family: 'Poppins'; padding: 4px; font-size: 16px;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc</p>
+    </div>
+    <hr class="hr2">
+    <div style="display: flex; flex-direction: row; padding-top: 5px; padding-bottom: 5px;">
+      <div style="font-family: 'Poppins',sans-serif; font-size: 12px; width: 50%; padding: 0px 10px;">
+        <b>PRICE:</b> $499
+      </div>
+      <div style="font-family: 'Poppins',sans-serif; font-size: 12px; width: 50%; padding: 0px 10px;">
+        <b>RATINGS:</b> 4.5
+      </div>
+    </div>
+    <hr class="hr2">
+    <div style="display: flex; flex-direction: row;">
+      <div style="width: 50%; padding: 6px; justify-items: left;">
+        <button style="font-family: 'Poppins',sans-serif;" class="abc" routerLink="Checkout">BUY NOW</button>
+      </div>
+      <div style="width: 50%; margin-right: 0px; padding: 6px; padding-left: 10px;">
+        <button style="font-family: 'Poppins',sans-serif;" class="abc" routerLink="Course-Detail">DETAILS</button>
+      </div>
+    </div>
+  </div>
+  <div class="container-each">
+    <div class="image">
+      <img src="../../assets/course-images/course8.jpg" alt="">
+    </div>
+    <div class="course-title">
+      Machine Learning with Python
+    </div>
+    <div style="padding: 4px;">
+      <p style="margin-top: 0px; font-family: 'Poppins'; padding: 4px; font-size: 16px;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc</p>
+    </div>
+    <hr class="hr2">
+    <div style="display: flex; flex-direction: row; padding-top: 5px; padding-bottom: 5px;">
+      <div style="font-family: 'Poppins',sans-serif; font-size: 12px; width: 50%; padding: 0px 10px;">
+        <b>PRICE:</b> $499
+      </div>
+      <div style="font-family: 'Poppins',sans-serif; font-size: 12px; width: 50%; padding: 0px 10px;">
+        <b>RATINGS:</b> 4.5
+      </div>
+    </div>
+    <hr class="hr2">
+    <div style="display: flex; flex-direction: row;">
+      <div style="width: 50%; padding: 6px; justify-items: left;">
+        <button style="font-family: 'Poppins',sans-serif;" class="abc" routerLink="Checkout">BUY NOW</button>
+      </div>
+      <div style="width: 50%; margin-right: 0px; padding: 6px; padding-left: 10px;">
+        <button style="font-family: 'Poppins',sans-serif;" class="abc" routerLink="Course-Detail">DETAILS</button>
+      </div>
+    </div>
+  </div>-->
+
+    </div>
+  </div>
+
+</div>
